@@ -5,7 +5,10 @@ function App() {
   return (
     <div className="App">
       <motion.form 
-          initial={{ opacity: 0 }}
+          initial={{ 
+            x: [0],
+            opacity: 0 
+          }}
           animate={{
               x: [50, 0],
               opacity: 1,
