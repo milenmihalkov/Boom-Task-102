@@ -1,9 +1,21 @@
 import "./App.css";
+import {motion} from "framer-motion/dist/framer-motion";
 
 function App() {
   return (
     <div className="App">
-      <form>
+      <motion.form animate={{
+              x: [50, 0],
+              opacity: 1,
+              scale: 1
+            }}
+            transition={{
+              duration: 0.8,
+              delay: 0.3,
+              ease: [0.5, 0.5, 0.5, 0.5]
+            }}
+            initial={{ opacity: 0 }}
+            whileHover={{ rotate: 20 }}>
         <h1>Create An Account</h1>
         <label>
           Email:
@@ -14,7 +26,7 @@ function App() {
           <input name="password" type="password" required />
         </label>
         <button>Sign Up!</button>
-      </form>
+      </motion.form>
     </div>
   );
 }
