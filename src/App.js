@@ -4,7 +4,9 @@ import {motion} from "framer-motion/dist/framer-motion";
 function App() {
   return (
     <div className="App">
-      <motion.form animate={{
+      <motion.form 
+          initial={{ opacity: 0 }}
+          animate={{
               x: [50, 0],
               opacity: 1,
               scale: 1
@@ -14,8 +16,7 @@ function App() {
               delay: 0.3,
               ease: [0.5, 0.5, 0.5, 0.5]
             }}
-            initial={{ opacity: 0 }}
-            whileHover={{ rotate: 20 }}>
+            >
         <h1>Create An Account</h1>
         <label>
           Email:
